@@ -1,0 +1,137 @@
+body {
+    background-color: #eeede1;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    width: 900px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.left-panel {
+    position: relative;
+    width: 330px;
+    background: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: auto; /* 根據內容調整 */
+}
+
+.top-image {
+    width: 100%; /* 寬度占滿 */
+    text-align: center; /* 居中對齊 */
+    overflow: hidden; /* 確保內容不會超出容器 */
+}
+
+.top-image img {
+    width: 100%; /* 圖片寬度適應容器 */
+    height: 100%; /* 圖片高度適應容器 */
+    object-fit: cover; /* 保持圖片比例，裁剪多餘部分 */
+}
+
+.photo-panel {
+    width: 100%;
+    height: 500px; /* 限制原背景圖片高度 */
+    background-image: url('hu.jpg');
+    background-size: cover; /* 填充容器 */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* 半透明效果 */
+    z-index: 1;
+    margin-top: -20px; /* 避免與上方圖片重疊 */
+}
+
+
+.text-content {
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content p {
+    margin: 10px 0;
+}
+
+.icon {
+    width: 60px;
+    margin-top: auto;
+}
+
+.right-panel {
+    width: 540px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+section > h2 {
+    position: relative;
+    font-size: 20px; 
+    margin-bottom: 15px; 
+    padding-bottom: 5px; 
+    border-bottom: 2px solid #ddd; 
+}
+.timeline .entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.music-gallery {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; /
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.music-item {
+    text-align: center; /* 確保文字和圖片居中 */
+    flex: 1; /* 讓每個音樂項目平均分配空間 */
+    max-width: 150px; /* 限制每個項目的寬度，防止拉伸 */
+}
+
+.music-item img {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    transition: transform 0.2s ease; 
+}
+
+.music-item img:hover {
+    transform: scale(1.1); 
+}
+
+.music-item span {
+    margin-top: 8px; /* 文字與圖片之間的間距 */
+    display: block; /* 確保文字換行顯示 */
+    font-size: 14px; /* 文字大小 */
+    color: #333; /* 文字顏色 */
+}
+
+.note {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
